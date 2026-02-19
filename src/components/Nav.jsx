@@ -1,12 +1,5 @@
 import { useState, useEffect } from 'react'
-
-const links = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Contact', href: '#contact' },
-]
+import { Link } from 'react-router-dom'
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -27,24 +20,27 @@ export default function Nav() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a
-          href="#"
+        <Link
+          to="/"
           className="font-mono text-cyan-400 font-bold text-lg hover:text-cyan-300 transition-colors"
         >
           {'> joe_grady'}
-        </a>
+        </Link>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
+          <Link
+            to="/rails"
+            className="font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+          >
+            How I Rails
+          </Link>
+          <Link
+            to="/claude"
+            className="font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+          >
+            Building with Claude
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -66,16 +62,20 @@ export default function Nav() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden bg-[#0a0a0f]/95 backdrop-blur-md border-b border-white/5 px-6 pb-4">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileOpen(false)}
-              className="block py-2 font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
+          <Link
+            to="/rails"
+            onClick={() => setMobileOpen(false)}
+            className="block py-2 font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+          >
+            How I Rails
+          </Link>
+          <Link
+            to="/claude"
+            onClick={() => setMobileOpen(false)}
+            className="block py-2 font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+          >
+            Building with Claude
+          </Link>
         </div>
       )}
     </nav>
