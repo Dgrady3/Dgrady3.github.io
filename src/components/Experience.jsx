@@ -25,6 +25,7 @@ const experiences = [
       'Invented and patented a product that can be used on a baseball bat to increase swing velocity, hand speed, and time to impact (US9550100B2). Demonstrated a 9% bat speed increase and 12% hand speed improvement with collegiate players. Pitched to the NFHS for approval — rules committee didn\'t pass it, but the journey from concept to patent to pitch was the real win.',
     tech: ['Product Development', 'Patent Law', 'Sports Science', 'Sales'],
     link: 'https://patents.google.com/patent/US9550100B2',
+    linkLabel: 'View Patent',
   },
   {
     role: 'Entrepreneur',
@@ -42,6 +43,7 @@ const experiences = [
       'Attended an intensive 18-week software engineering bootcamp in Boston focused on Ruby on Rails, JavaScript, TDD, and agile development. This is where the foundation was laid.',
     tech: ['Ruby', 'Rails', 'JavaScript', 'TDD', 'Agile'],
     link: 'https://launchacademy.com',
+    linkLabel: 'Launch Academy',
   },
   {
     role: 'Operator',
@@ -92,7 +94,7 @@ export default function Experience() {
                           rel="noopener noreferrer"
                           className="text-cyan-400 hover:text-cyan-300 transition-colors underline underline-offset-2"
                         >
-                          View Patent &rarr;
+                          {exp.linkLabel} &rarr;
                         </a>
                       </>
                     )}
