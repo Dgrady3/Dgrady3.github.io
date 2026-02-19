@@ -2,7 +2,7 @@ import AnimatedSection from './AnimatedSection'
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6">
+    <section id="about" className="py-12 md:py-24 px-6">
       <div className="max-w-4xl mx-auto">
         <AnimatedSection>
           <h2 className="font-mono text-cyan-400 text-sm mb-2">{'> about'}</h2>

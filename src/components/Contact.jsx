@@ -13,7 +13,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 px-6">
+    <section id="contact" className="py-12 md:py-24 px-6">
       <div className="max-w-2xl mx-auto">
         <AnimatedSection>
           <h2 className="font-mono text-cyan-400 text-sm mb-2">{'> contact'}</h2>

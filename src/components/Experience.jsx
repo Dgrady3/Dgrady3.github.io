@@ -55,7 +55,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 px-6 bg-dark-800/50">
+    <section id="experience" className="py-12 md:py-24 px-6 bg-dark-800/50">
       <div className="max-w-4xl mx-auto">
         <AnimatedSection>
           <h2 className="font-mono text-cyan-400 text-sm mb-2">{'> experience'}</h2>
