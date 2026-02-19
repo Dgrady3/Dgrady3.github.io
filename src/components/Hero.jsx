@@ -2,6 +2,10 @@ import { motion } from 'framer-motion'
 
 const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
 
+function scrollTo(id) {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+}
+
 export default function Hero() {
   if (isMobile) {
     return (
@@ -16,18 +20,18 @@ export default function Hero() {
             Senior Backend Engineer | Available for Contract Work
           </p>
           <div className="flex items-center justify-center gap-6">
-            <a
-              href="#projects"
+            <button
+              onClick={() => scrollTo('projects')}
               className="px-6 py-3 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-sm rounded"
             >
               View Projects
-            </a>
-            <a
-              href="#contact"
+            </button>
+            <button
+              onClick={() => scrollTo('contact')}
               className="px-6 py-3 border border-white/10 text-gray-400 font-mono text-sm rounded"
             >
               Get in Touch
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -89,18 +93,18 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="flex items-center justify-center gap-6"
         >
-          <a
-            href="#projects"
+          <button
+            onClick={() => scrollTo('projects')}
             className="px-6 py-3 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-sm rounded hover:bg-cyan-500/20 hover:border-cyan-400/50 transition-all"
           >
             View Projects
-          </a>
-          <a
-            href="#contact"
+          </button>
+          <button
+            onClick={() => scrollTo('contact')}
             className="px-6 py-3 border border-white/10 text-gray-400 font-mono text-sm rounded hover:border-white/25 hover:text-gray-200 transition-all"
           >
             Get in Touch
-          </a>
+          </button>
         </motion.div>
 
         <motion.div
