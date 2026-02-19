@@ -1,4 +1,5 @@
 import AnimatedSection from './AnimatedSection'
+import CodeBlock from './CodeBlock'
 
 export default function About() {
   return (
@@ -98,15 +99,7 @@ export default function About() {
           </AnimatedSection>
 
           <AnimatedSection delay={0.2}>
-            <div className="bg-dark-800 border border-white/5 rounded-lg p-6 font-mono text-sm">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-3 h-3 rounded-full bg-red-500/80" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                <div className="w-3 h-3 rounded-full bg-green-500/80" />
-                <span className="text-gray-600 ml-2 text-xs">joe_grady.rb</span>
-              </div>
-              <pre className="text-gray-400 overflow-x-auto">
-                <code>
+            <CodeBlock title="joe_grady.rb">
 {`class JoeGrady < Engineer
   def initialize
     @location  = "Charlotte, NC"
@@ -128,9 +121,7 @@ export default function About() {
     true # for contract work
   end
 end`}
-                </code>
-              </pre>
-            </div>
+            </CodeBlock>
           </AnimatedSection>
         </div>
       </div>
