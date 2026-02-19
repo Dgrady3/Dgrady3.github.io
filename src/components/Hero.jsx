@@ -5,17 +5,8 @@ const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
 export default function Hero() {
   if (isMobile) {
     return (
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `linear-gradient(rgba(34,211,238,0.3) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(34,211,238,0.3) 1px, transparent 1px)`,
-            backgroundSize: '60px 60px',
-          }}
-        />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-[120px]" />
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <section className="min-h-screen flex items-center justify-center relative">
+        <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="font-mono text-cyan-400 text-sm mb-4">{'> hello_world'}</p>
           <h1 className="font-mono text-4xl font-bold text-white mb-6">Joe Grady</h1>
           <p className="text-xl text-gray-300 mb-3 font-light">
