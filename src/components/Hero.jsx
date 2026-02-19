@@ -1,6 +1,26 @@
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
+
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768)
+  }, [])
+  return isMobile
+}
 
 export default function Hero() {
+  const isMobile = useIsMobile()
+
+  const anim = (delay) =>
+    isMobile
+      ? {}
+      : {
+          initial: { opacity: 0, y: 20 },
+          animate: { opacity: 1, y: 0 },
+          transition: { duration: 0.5, delay },
+        }
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Subtle grid background */}
@@ -17,48 +37,26 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-[120px]" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="font-mono text-cyan-400 text-sm md:text-base mb-4"
-        >
+        <motion.p {...anim(0.1)} className="font-mono text-cyan-400 text-sm md:text-base mb-4">
           {'> hello_world'}
         </motion.p>
 
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          {...anim(0.2)}
           className="font-mono text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
         >
           Joe Grady
         </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-xl md:text-2xl text-gray-300 mb-3 font-light"
-        >
+        <motion.p {...anim(0.3)} className="text-xl md:text-2xl text-gray-300 mb-3 font-light">
           Full-stack engineer with a founder&apos;s mindset.
         </motion.p>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="font-mono text-sm md:text-base text-cyan-400/70 mb-10"
-        >
+        <motion.p {...anim(0.4)} className="font-mono text-sm md:text-base text-cyan-400/70 mb-10">
           Senior Backend Engineer | Available for Contract Work
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
-          className="flex items-center justify-center gap-6"
-        >
+        <motion.div {...anim(0.5)} className="flex items-center justify-center gap-6">
           <a
             href="#projects"
             className="px-6 py-3 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-sm rounded hover:bg-cyan-500/20 hover:border-cyan-400/50 transition-all"
@@ -73,21 +71,23 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        >
+        {/* Scroll indicator — desktop only */}
+        {!isMobile && (
           <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-5 h-8 border border-white/20 rounded-full flex items-start justify-center p-1"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+            className="absolute bottom-10 left-1/2 -translate-x-1/2"
           >
-            <div className="w-1 h-2 bg-cyan-400/50 rounded-full" />
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="w-5 h-8 border border-white/20 rounded-full flex items-start justify-center p-1"
+            >
+              <div className="w-1 h-2 bg-cyan-400/50 rounded-full" />
+            </motion.div>
           </motion.div>
-        </motion.div>
+        )}
       </div>
     </section>
   )
