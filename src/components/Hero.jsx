@@ -17,7 +17,7 @@ export default function Hero() {
             Full-stack engineer with a founder&apos;s mindset.
           </p>
           <p className="font-mono text-sm text-cyan-400/70 mb-10">
-            Senior Backend Engineer | Available for Contract Work
+            Senior Backend Engineer | Open to Side Projects
           </p>
           <div className="flex items-center justify-center gap-6">
             <button
@@ -84,7 +84,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="font-mono text-base text-cyan-400/70 mb-10"
         >
-          Senior Backend Engineer | Available for Contract Work
+          Senior Backend Engineer | Open to Side Projects
         </motion.p>
 
         <motion.div

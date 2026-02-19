@@ -118,7 +118,7 @@ export default function About() {
   end
 
   def available?
-    true # for contract work
+    true # evenings & weekends
   end
 end`}
             </CodeBlock>

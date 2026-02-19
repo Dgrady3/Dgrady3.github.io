@@ -18,10 +18,11 @@ export default function Contact() {
         <AnimatedSection>
           <h2 className="font-mono text-cyan-400 text-sm mb-2">{'> contact'}</h2>
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Let&apos;s Work Together
+            Say Hello
           </h3>
           <p className="text-gray-400 mb-10">
-            Available for Rails contract work and interesting projects. Drop me a line.
+            I&apos;m happily employed full-time and take on a small number of
+            side projects that keep my skills sharp. Have something interesting? Drop me a line.
           </p>
         </AnimatedSection>
 
