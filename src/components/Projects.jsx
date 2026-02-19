@@ -24,7 +24,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-12 md:py-24 px-6">
+    <section id="projects" className="py-8 md:py-24 px-6">
       <div className="max-w-4xl mx-auto">
         <AnimatedSection>
           <h2 className="font-mono text-cyan-400 text-sm mb-2">{'> projects'}</h2>
