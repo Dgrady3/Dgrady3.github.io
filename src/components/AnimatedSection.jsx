@@ -1,17 +1,8 @@
 import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
 
-function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(false)
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 768)
-  }, [])
-  return isMobile
-}
+const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
 
 export default function AnimatedSection({ children, className = '', delay = 0 }) {
-  const isMobile = useIsMobile()
-
   if (isMobile) {
     return <div className={className}>{children}</div>
   }
