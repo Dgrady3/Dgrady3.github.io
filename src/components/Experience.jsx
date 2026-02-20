@@ -46,11 +46,11 @@ const experiences = [
     linkLabel: 'Launch Academy',
   },
   {
-    role: 'Operator',
+    role: 'Branch Manager',
     company: 'Student Painters',
     period: 'College',
     description:
-      'Ran a residential painting business through Student Painters — hired and managed 10 employees across painting and door-to-door sales, completed estimates, scheduled jobs, and generated $42K in revenue in a single 3-month summer season. Got tired of cold calling, tried to build a website to get leads — and that\'s how the code addiction started.',
+      'Started and ran my own residential painting business backed by Student Painters. Hired and managed 10 employees, handled door-to-door sales, estimates, scheduling, and all operations — generating $42K in revenue in a single 3-month summer season. Got tired of cold calling, tried to build a website to get leads — and that\'s how the code addiction started.',
     tech: ['Sales', 'Operations', 'Team Management', 'Hustle'],
   },
 ]

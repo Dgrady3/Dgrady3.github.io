@@ -27,7 +27,7 @@ export default function About() {
             </p>
 
             <p className="text-gray-400 leading-relaxed mb-4">
-              In college, I ran a residential painting business through{' '}
+              In college, I ran a branch of{' '}
               <a
                 href="https://www.studentpainters.biz/"
                 target="_blank"
@@ -36,8 +36,9 @@ export default function About() {
               >
                 Student Painters
               </a>
-              . I hired and managed a crew of 10 across operations and door-to-door
-              sales, ran estimates, scheduled projects, and generated $42K in revenue
+              {' '}as a Branch Manager — responsible for the entire operation from
+              the ground up. I built a crew of 10, drove all sales door-to-door,
+              ran estimates, scheduled projects, and generated $42K in revenue
               during a single three-month summer season. The experience was intense
               and rewarding — but cold calling wasn&apos;t scalable. I wanted a better
               way to reach customers, so I set out to build a website.
