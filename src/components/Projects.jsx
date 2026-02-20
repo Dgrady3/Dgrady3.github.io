@@ -19,6 +19,22 @@ const projects = [
     link: '/claude',
   },
   {
+    title: 'AWS in Production',
+    description:
+      'What I\'ve learned running Rails apps on AWS — ECS, RDS tuning, secrets management, CI/CD, IAM, and cost awareness.',
+    tags: ['AWS', 'ECS', 'Terraform', 'Infrastructure'],
+    status: 'Published',
+    link: '/aws',
+  },
+  {
+    title: 'Sidekiq at Scale',
+    description:
+      'Sidekiq is simple until it isn\'t. Queue design, fan-out patterns, idempotency, rate limiting, and memory tuning for production workloads.',
+    tags: ['Sidekiq', 'Redis', 'Background Jobs', 'Ruby'],
+    status: 'Published',
+    link: '/sidekiq',
+  },
+  {
     title: 'Coming Soon',
     description: 'Rails side project — details dropping soon.',
     tags: ['Ruby on Rails', 'PostgreSQL', 'AWS'],

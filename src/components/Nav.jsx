@@ -41,6 +41,18 @@ export default function Nav() {
           >
             Building with Claude
           </Link>
+          <Link
+            to="/aws"
+            className="font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+          >
+            AWS in Production
+          </Link>
+          <Link
+            to="/sidekiq"
+            className="font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+          >
+            Sidekiq at Scale
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -75,6 +87,20 @@ export default function Nav() {
             className="block py-2 font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors"
           >
             Building with Claude
+          </Link>
+          <Link
+            to="/aws"
+            onClick={() => setMobileOpen(false)}
+            className="block py-2 font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+          >
+            AWS in Production
+          </Link>
+          <Link
+            to="/sidekiq"
+            onClick={() => setMobileOpen(false)}
+            className="block py-2 font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+          >
+            Sidekiq at Scale
           </Link>
         </div>
       )}

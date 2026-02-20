@@ -9,6 +9,8 @@ import Contact from './components/Contact'
 import TableOfContents from './components/TableOfContents'
 import Rails from './pages/Rails'
 import Claude from './pages/Claude'
+import Aws from './pages/Aws'
+import SidekiqPage from './pages/Sidekiq'
 
 const homeSections = [
   { id: 'about', title: 'About' },
@@ -52,6 +54,8 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/rails" element={<Rails />} />
         <Route path="/claude" element={<Claude />} />
+        <Route path="/aws" element={<Aws />} />
+        <Route path="/sidekiq" element={<SidekiqPage />} />
       </Routes>
       <Footer />
     </div>
