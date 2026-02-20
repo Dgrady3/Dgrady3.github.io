@@ -42,12 +42,6 @@ export default function Nav() {
             How I Claude
           </Link>
           <Link
-            to="/aws"
-            className="font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors"
-          >
-            AWS in Prod
-          </Link>
-          <Link
             to="/sidekiq"
             className="font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors"
           >
@@ -87,13 +81,6 @@ export default function Nav() {
             className="block py-2 font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors"
           >
             How I Claude
-          </Link>
-          <Link
-            to="/aws"
-            onClick={() => setMobileOpen(false)}
-            className="block py-2 font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors"
-          >
-            AWS in Prod
           </Link>
           <Link
             to="/sidekiq"
