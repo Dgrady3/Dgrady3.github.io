@@ -39,13 +39,13 @@ export default function Nav() {
             to="/claude"
             className="font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors"
           >
-            Building with Claude
+            How I Claude
           </Link>
           <Link
             to="/aws"
             className="font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors"
           >
-            AWS in Production
+            AWS in Prod
           </Link>
           <Link
             to="/sidekiq"
@@ -86,14 +86,14 @@ export default function Nav() {
             onClick={() => setMobileOpen(false)}
             className="block py-2 font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors"
           >
-            Building with Claude
+            How I Claude
           </Link>
           <Link
             to="/aws"
             onClick={() => setMobileOpen(false)}
             className="block py-2 font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors"
           >
-            AWS in Production
+            AWS in Prod
           </Link>
           <Link
             to="/sidekiq"
