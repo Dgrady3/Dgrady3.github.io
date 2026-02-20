@@ -1,15 +1,36 @@
 import { useState } from 'react'
 import AnimatedSection from './AnimatedSection'
 
+const FORMSPREE_ID = 'xyzgobkl'
+
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // TODO: Wire up to a form service (Formspree, Netlify Forms, etc.)
-    console.log('Form submitted:', formData)
-    setSubmitted(true)
+    setSubmitting(true)
+    setError(false)
+
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        setError(true)
+      }
+    } catch {
+      setError(true)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -67,11 +88,17 @@ export default function Contact() {
                   placeholder="Tell me about your project..."
                 />
               </div>
+              {error && (
+                <p className="text-red-400 font-mono text-sm">
+                  Something went wrong. Try again or reach out on LinkedIn.
+                </p>
+              )}
               <button
                 type="submit"
-                className="w-full py-3 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-sm rounded hover:bg-cyan-500/20 hover:border-cyan-400/50 transition-all"
+                disabled={submitting}
+                className="w-full py-3 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-sm rounded hover:bg-cyan-500/20 hover:border-cyan-400/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {submitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           )}
