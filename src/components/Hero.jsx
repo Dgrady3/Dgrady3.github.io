@@ -18,7 +18,7 @@ export default function Hero() {
             <br />
             <span className="text-cyan-400 font-normal">Founder&apos;s mindset.</span>
           </p>
-          <p className="font-mono text-xs text-gray-500 uppercase tracking-widest mb-10">
+          <p className="font-mono text-[10px] text-gray-500 uppercase tracking-widest mt-2 mb-10">
             Open to Side Projects
           </p>
           <div className="flex items-center justify-center gap-4">
