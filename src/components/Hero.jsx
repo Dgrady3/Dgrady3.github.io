@@ -14,7 +14,9 @@ export default function Hero() {
           <p className="font-mono text-cyan-400 text-sm mb-4">{'> hello_world'}</p>
           <h1 className="font-mono text-4xl font-bold text-white mb-6">Joe Grady</h1>
           <p className="text-xl text-gray-300 mb-3 font-light">
-            Full-stack engineer with a founder&apos;s mindset.
+            Full-stack engineer
+            <br />
+            with a founder&apos;s mindset.
           </p>
           <p className="font-mono text-sm text-cyan-400/70 mb-10">
             Senior Backend Engineer
