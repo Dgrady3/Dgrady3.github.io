@@ -14,6 +14,7 @@ import SidekiqPage from './pages/Sidekiq'
 const homeSections = [
   { id: 'about', title: 'About' },
   { id: 'skills', title: 'Skills' },
+  { id: 'writing', title: 'Writing' },
   { id: 'projects', title: 'Projects' },
   { id: 'experience', title: 'Experience' },
   { id: 'contact', title: 'Contact' },
