@@ -13,14 +13,11 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="font-mono text-cyan-400 text-sm mb-4">{'> hello_world'}</p>
           <h1 className="font-mono text-4xl font-bold text-white mb-6">Joe Grady</h1>
-          <p className="text-xl text-gray-300 mb-3 font-light">
-            Full-stack engineer
-            <br />
-            with a founder&apos;s mindset.
+          <p className="text-xl text-gray-300 mb-2 font-light">
+            Full-stack engineer.{' '}
+            <span className="text-cyan-400">Founder&apos;s mindset.</span>
           </p>
           <p className="font-mono text-sm text-cyan-400/70 mb-10">
-            Senior Backend Engineer
-            <br />
             Open to Side Projects
           </p>
           <div className="flex items-center justify-center gap-6">
@@ -79,7 +76,8 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-2xl text-gray-300 mb-3 font-light"
         >
-          Full-stack engineer with a founder&apos;s mindset.
+          Full-stack engineer.{' '}
+          <span className="text-cyan-400">Founder&apos;s mindset.</span>
         </motion.p>
 
         <motion.p
@@ -88,7 +86,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="font-mono text-base text-cyan-400/70 mb-10"
         >
-          Senior Backend Engineer | Open to Side Projects
+          Open to Side Projects
         </motion.p>
 
         <motion.div
