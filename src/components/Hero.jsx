@@ -17,7 +17,9 @@ export default function Hero() {
             Full-stack engineer with a founder&apos;s mindset.
           </p>
           <p className="font-mono text-sm text-cyan-400/70 mb-10">
-            Senior Backend Engineer | Open to Side Projects
+            Senior Backend Engineer
+            <br />
+            Open to Side Projects
           </p>
           <div className="flex items-center justify-center gap-6">
             <button
