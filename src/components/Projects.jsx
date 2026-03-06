@@ -27,16 +27,11 @@ const writing = [
 
 const projects = [
   {
-    title: 'Coming Soon',
-    description: 'Rails side project — details dropping soon.',
-    tags: ['Ruby on Rails', 'PostgreSQL', 'AWS'],
+    title: '2026 Projects Coming Soon',
+    description:
+      'New builds are in the works — stay tuned for launches later this year.',
+    tags: ['Ruby on Rails', 'React', 'AI', 'Full Stack'],
     status: 'In Progress',
-  },
-  {
-    title: 'Coming Soon',
-    description: 'Another build in the pipeline.',
-    tags: ['React', 'API Integration'],
-    status: 'Planned',
   },
   {
     title: 'Ecommerce Ventures',
