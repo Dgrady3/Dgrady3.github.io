@@ -32,6 +32,7 @@ const projects = [
       'Built a full-stack Turo market analysis tool for a client — aggregates listing data, runs a 5-metric investment engine (ROI, supply/demand, revenue, competitive density, profit ranking), and generates AI-powered buy/pass recommendations via Claude.',
     tags: ['React', 'Node.js', 'Claude API', 'Full Stack'],
     status: 'Shipped',
+    link: 'https://dereks-turo-metrics.vercel.app/',
   },
   {
     title: 'More 2026 Projects Coming Soon',
@@ -111,7 +112,7 @@ export default function Projects() {
 }
 
 function ProjectCard({ project }) {
-  return (
+  const card = (
     <div className="bg-dark-800 border border-white/5 rounded-lg p-6 hover:border-cyan-500/20 transition-all group">
       <div className="flex items-start justify-between mb-3">
         <h4 className="font-mono text-white text-lg group-hover:text-cyan-400 transition-colors">
@@ -142,4 +143,14 @@ function ProjectCard({ project }) {
       </div>
     </div>
   )
+
+  if (project.link) {
+    return (
+      <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+        {card}
+      </a>
+    )
+  }
+
+  return card
 }
