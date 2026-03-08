@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1200px;
+      height: 627px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0a0a;
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+    }
+    .card {
+      width: 1200px;
+      height: 627px;
+      background: #0a0a0a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Subtle corner glow */
+    .card::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      right: -80px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(12, 192, 184, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(12, 192, 184, 0.12);
+      border: 1px solid rgba(12, 192, 184, 0.3);
+      color: #0CC0B8;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-radius: 8px;
+      margin-bottom: 32px;
+    }
+    .title {
+      color: #f1f5f9;
+      font-size: 56px;
+      font-weight: 800;
+      line-height: 1.15;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .patent-number {
+      color: #0CC0B8;
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 28px;
+      letter-spacing: 2px;
+    }
+    .stat-row {
+      display: flex;
+      gap: 60px;
+      align-items: center;
+    }
+    .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .stat-value {
+      color: #f1f5f9;
+      font-size: 32px;
+      font-weight: 800;
+    }
+    .stat-value .accent {
+      color: #0CC0B8;
+    }
+    .stat-label {
+      color: #64748b;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+    .divider {
+      width: 1px;
+      height: 40px;
+      background: #1e293b;
+    }
+    .author {
+      position: absolute;
+      bottom: 28px;
+      color: #475569;
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .author span {
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">U.S. Patent</div>
+    <div class="title">Swing Speed<br>Training Device</div>
+    <div class="patent-number">US 9,550,100 B2</div>
+    <div class="stat-row">
+      <div class="stat">
+        <div class="stat-value"><span class="accent">+9%</span></div>
+        <div class="stat-label">Bat Speed</div>
+      </div>
+      <div class="divider"></div>
+      <div class="stat">
+        <div class="stat-value">Full Utility</div>
+        <div class="stat-label">Patent Type</div>
+      </div>
+      <div class="divider"></div>
+      <div class="stat">
+        <div class="stat-value">USPTO</div>
+        <div class="stat-label">Granted</div>
+      </div>
+    </div>
+    <div class="author">Joe Grady | <span>Inventor</span></div>
+  </div>
+</body>
+</html>

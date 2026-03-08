@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1200px;
+      height: 627px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0a0a;
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+    }
+    .card {
+      width: 1200px;
+      height: 627px;
+      background: #0a0a0a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      right: -80px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(12, 192, 184, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .name {
+      color: #f1f5f9;
+      font-size: 64px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .role {
+      color: #0CC0B8;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 36px;
+    }
+    .tags {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+    .tag {
+      background: rgba(12, 192, 184, 0.1);
+      border: 1px solid rgba(12, 192, 184, 0.25);
+      color: #94a3b8;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 8px;
+      letter-spacing: 0.5px;
+    }
+    .subtitle {
+      color: #64748b;
+      font-size: 18px;
+      font-weight: 500;
+      text-align: center;
+    }
+    .subtitle span {
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="name">Joe Grady</div>
+    <div class="role">Full-Stack Engineer</div>
+    <div class="tags">
+      <span class="tag">Rails</span>
+      <span class="tag">React</span>
+      <span class="tag">Claude Code</span>
+      <span class="tag">Sidekiq</span>
+    </div>
+    <div class="subtitle">Deep dives, side projects, and <span>10+ years shipping code</span></div>
+  </div>
+</body>
+</html>
