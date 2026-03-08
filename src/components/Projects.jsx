@@ -131,26 +131,30 @@ function ProjectCard({ project }) {
         </span>
       </div>
       <p className="text-gray-400 text-sm mb-4">{project.description}</p>
-      <div className="flex flex-wrap gap-2">
-        {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className="font-mono text-xs px-2 py-1 bg-cyan-500/5 text-cyan-400/60 rounded border border-cyan-500/10"
+      <div className="flex items-center justify-between mt-4">
+        <div className="flex flex-wrap gap-2">
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="font-mono text-xs px-2 py-1 bg-cyan-500/5 text-cyan-400/60 rounded border border-cyan-500/10"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+        {project.link && (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-xs text-cyan-400 hover:text-cyan-300 transition-colors whitespace-nowrap ml-4"
           >
-            {tag}
-          </span>
-        ))}
+            view project →
+          </a>
+        )}
       </div>
     </div>
   )
-
-  if (project.link) {
-    return (
-      <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
-        {card}
-      </a>
-    )
-  }
 
   return card
 }
