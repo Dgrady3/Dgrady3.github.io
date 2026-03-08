@@ -27,7 +27,14 @@ const writing = [
 
 const projects = [
   {
-    title: '2026 Projects Coming Soon',
+    title: 'Turo Market Analyzer',
+    description:
+      'Built a full-stack Turo market analysis tool for a client — aggregates listing data, runs a 5-metric investment engine (ROI, supply/demand, revenue, competitive density, profit ranking), and generates AI-powered buy/pass recommendations via Claude.',
+    tags: ['React', 'Node.js', 'Claude API', 'Full Stack'],
+    status: 'Shipped',
+  },
+  {
+    title: 'More 2026 Projects Coming Soon',
     description:
       'New builds are in the works — stay tuned for launches later this year.',
     tags: ['Ruby on Rails', 'React', 'AI', 'Full Stack'],
